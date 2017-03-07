@@ -32,8 +32,7 @@
 
 /* 首先给所有元素加上过渡效果 */
 * {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+
 }
 /* 白色背景太单调了，我们来点背景 */
 html {
@@ -273,7 +272,7 @@ copyright©EricTang2017
   }
 
   * {
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 3s;
+    transition: all 3s;
   }
 </style>
