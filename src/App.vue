@@ -18,7 +18,7 @@
     },
     data() {
       return {
-        interval: 30,
+        interval: 35,
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
@@ -40,6 +40,7 @@ html {
   color: rgb(20,209,18);
   background: black;
 }
+
 /* 文字离边框太近了 */
 .styleEditor {
   padding: .5em;
@@ -58,7 +59,7 @@ html{
 /* 换个位置 */
 .styleEditor {
   position: fixed; left: 0; top: 0;
-  transform: translateX(95vh) rotateY(-10deg) translateZ(-100px);
+  transform: translateX(110%) rotateY(-10deg) translateZ(-100px);
 }
 
 /* 接下来我给自己准备一个编辑器 */
@@ -66,7 +67,7 @@ html{
   position: fixed; right: 0; top: 0;
   -webkit-transition: all 3s;
   transition: all 3s;
-  transform: rotateY(360deg) translateX(-95vh) rotateY(10deg) translateZ(-100px);
+  transform: rotateY(360deg) translateX(-105%) rotateY(10deg) translateZ(-100px);
   padding: .5em;  margin: .5em;
   width: 48vw; height: 90vh;
   border: 1px solid;
