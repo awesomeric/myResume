@@ -18,12 +18,12 @@
     },
     data() {
       return {
-        interval: 35,
+        interval: 45,
         currentStyle: '',
         enableHtml: false,
         fullStyle: [
-          `/*
-* 大家好，我是Eric
+          `
+/* 大家好，我是Eric
 * 一直没有一份拿的出手的简历，最近看了某大神的项目，受到启发
 * 于是决定来制作一份自己的简历
 * 那就从css开始吧
@@ -79,15 +79,18 @@ html{
 `,
           `
 /* 这个简历好像差点什么
- * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
+ * 对了，这是 Markdown 格式的，美化一下
  * 简单，用开源工具翻译成 HTML 就行了
  */
 `
           ,
           `
 /* 再对 HTML 加点样式 */
+* {
+  transition: all 5s;
+}
 .resumeEditor{
-  background:rgb(240,230,140);
+  background: rgb(20,209,18);
   padding: 2em;
   height: 100vh;
 }
@@ -103,6 +106,10 @@ html{
   content: '•';
   margin-right: .5em;
 }
+.resumeEditor ul> li{
+  margin-top: 2px;
+}
+
 .resumeEditor ol {
   counter-reset: section;
 }
@@ -119,7 +126,7 @@ html{
 
 
 
-
+谢谢阅读
 /**
  *   ┏┓　　　┏┓
  * ┏┛┻━━━┛┻┓
@@ -139,7 +146,7 @@ html{
  *      ┃┫┫　┃┫┫
  *      ┗┻┛　┗┻┛
  *
- *谢谢阅读
+ *
  */
 
 
@@ -211,7 +218,7 @@ copyright©EricTang2017
       },
       progressivelyShowStyle(n) {
         return new Promise((resolve, reject) => {
-          let interval = this.interval
+          let interval = 30
           let showStyle = (async function () {
             let style = this.fullStyle[n]
             if (!style) { return }
@@ -255,7 +262,8 @@ copyright©EricTang2017
           }
           showResume()
         })
-      }
+      },
+
     }
   }
 
